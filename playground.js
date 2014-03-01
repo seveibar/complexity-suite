@@ -2,6 +2,7 @@
 var playground = function(){
 	return {
 		ui : null,
+		vars : {},
 		canvas : null,
 		context : null,
 		width : 600,

@@ -20,8 +20,9 @@ playground.ui = function(){
 		slider.slider({
 			min : min,
 			max : max,
-			change : function (event, ui){
+			slide : function (event, ui){
 				value_text.text(" ["+slider.slider("value")+"]");
+				playground.vars[name] = slider.slider("value");
 				callback && callback(slider.slider("value"));
 			}
 		});
