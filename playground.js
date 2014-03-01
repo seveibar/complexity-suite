@@ -19,6 +19,8 @@ window.onload = function(){
 	playground.canvas = canvas;
 	playground.context = context;
 
+	// Add some test ui elements
+
 	playground.ui.add_slider("Time Step",
 		0,100);
 

@@ -1,5 +1,7 @@
 playground.ui = function(){
 
+	// Add a element to the playground display
+
 	function add_slider(name, min, max, callback, initial){
 		
 		var slider_container = $("<div class='slider-container'></div>"); 
