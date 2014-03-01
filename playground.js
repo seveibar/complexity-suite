@@ -1,6 +1,8 @@
 
 var playground = function(){
 
+	// Sets title of playground (changes html element)
+
 	function set_title(title){
 		$("#title-bar").text(title);
 	}
