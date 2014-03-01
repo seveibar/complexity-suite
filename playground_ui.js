@@ -24,10 +24,12 @@ playground.ui = function(){
 				value_text.text(" ["+slider.slider("value")+"]");
 				playground.vars[name] = slider.slider("value");
 				callback && callback(slider.slider("value"));
+				playground.value_changed();
 			}
 		});
 
 		slider.slider("value",(initial || (min + max)/2));
+		playground.vars[name] = slider.slider("value");
 
 		value_text.text(" ["+slider.slider("value")+"]");
 

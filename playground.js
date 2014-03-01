@@ -7,6 +7,8 @@ var playground = function(){
 		$("#title-bar").text(title);
 	}
 
+	function doNothing(){};
+
 	return {
 		ui : null,
 		vars : {},
@@ -15,7 +17,8 @@ var playground = function(){
 		width : 600,
 		height : 500,
 
-		set_title: set_title
+		set_title: set_title,
+		value_changed : doNothing
 	};
 }();
 
@@ -33,10 +36,30 @@ window.onload = function(){
 
 	playground.set_title("X Y Mover");
 
-	playground.ui.add_slider("Time Step",
+	playground.ui.add_slider("posx",
 		0,100);
 
-	playground.ui.add_slider("Speed",
-		20,1000);
+	playground.ui.add_slider("posy",
+		0,100);
 
+	function render(){
+		var c = playground.context;
+		var w = playground.width;
+		var h = playground.height;
+
+		var posx = playground.vars.posx;
+		var posy = playground.vars.posy;
+
+		c.fillStyle = "#fff";
+		c.fillRect(0,0,w,h);
+
+		c.fillStyle = "#000";
+		c.fillRect(posx/100 * w,posy / 100 * h,10,10);
+
+	}
+
+	playground.value_changed = render;
+
+	// Initial Render
+	render();
 };
