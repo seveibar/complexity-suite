@@ -1,18 +1,26 @@
 body,
 html {
   margin: 0px;
-  padding: 10px;
+  padding: 0px;
   background-color: #ddd;
   text-align: center;
   font-family: "Roboto", sans-serif;
-  color: #444l;
+  color: #444;
+  height: 100%;
+}
+body {
+  overflow: hidden;
 }
 #container {
   box-shadow: 0px 0px 10px #888;
-  display: inline-block;
   background-color: #fff;
   width: 900px;
   height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -450px;
+  margin-top: -250px;
 }
 #title-bar {
   height: 60px;
@@ -26,8 +34,9 @@ html {
 #control-panel {
   display: inline-block;
   float: left;
-  width: 300px;
+  width: 299px;
   height: 500px;
+  border-right: 1px solid #ccc;
   text-align: center;
 }
 .slider-container {
