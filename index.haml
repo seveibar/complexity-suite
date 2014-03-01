@@ -17,5 +17,6 @@
             #control-panel
                 #title-bar Gravity Simulation
             %canvas{id:'canvas',width:'600px',height:'500px'}
+            #{puts `cd simulations && ls`.split(" ").map{|x| "<a href=\"?#{x}\">#{x}</a>"}}
         %script{src:'lib/less-debug.js'}
         %script{src:'lib/less.min.js'}
