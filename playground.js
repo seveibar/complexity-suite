@@ -1,12 +1,19 @@
 
 var playground = function(){
+
+	function set_title(title){
+		$("#title-bar").text(title);
+	}
+
 	return {
 		ui : null,
 		vars : {},
 		canvas : null,
 		context : null,
 		width : 600,
-		height : 500
+		height : 500,
+
+		set_title: set_title
 	};
 }();
 
@@ -21,6 +28,8 @@ window.onload = function(){
 	playground.context = context;
 
 	// Add some test ui elements
+
+	playground.set_title("X Y Mover");
 
 	playground.ui.add_slider("Time Step",
 		0,100);
