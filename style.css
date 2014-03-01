@@ -1,0 +1,46 @@
+body,
+html {
+  margin: 0px;
+  padding: 10px;
+  background-color: #ddd;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #444l;
+}
+#container {
+  box-shadow: 0px 0px 10px #888;
+  display: inline-block;
+  background-color: #fff;
+  width: 900px;
+  height: 500px;
+}
+#title-bar {
+  height: 60px;
+  line-height: 60px;
+  background-color: #eee;
+}
+#canvas {
+  display: inline-block;
+  float: right;
+}
+#control-panel {
+  display: inline-block;
+  float: left;
+  width: 300px;
+  height: 500px;
+  text-align: center;
+}
+.slider-container {
+  display: inline-block;
+  width: 200px;
+  vertical-align: middle;
+  height: 50px;
+  padding-top: 10px;
+}
+.slider-text {
+  color: #888;
+  font-size: 14px;
+}
+.slider {
+  margin-top: 10px;
+}
