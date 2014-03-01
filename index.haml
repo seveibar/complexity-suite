@@ -8,15 +8,15 @@
 
         %script{src:"lib/jquery.js"}
         %script{src:"lib/jquery-ui.js"}
+        %script{src:"lib/underscore.min.js"}
         %script{src:"playground.js"}
         %script{src:"playground_ui.js"}
-        %script{src:"simulations/xyslider.js"}
 
     %body
         #container
             #control-panel
                 #title-bar Gravity Simulation
             %canvas{id:'canvas',width:'600px',height:'500px'}
-            #{puts `cd simulations && ls`.split(" ").map{|x| "<a href=\"?#{x}\">#{x}</a>"}}
+            #{puts `cd simulations && ls`.split(" ").map{|x| x.split(".")[0]}.map{|x| "<a href='##{x}' onclick=\"playground.load('#{x}')\">#{x}</a>"}}
         %script{src:'lib/less-debug.js'}
         %script{src:'lib/less.min.js'}
