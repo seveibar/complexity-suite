@@ -23,6 +23,13 @@ var playground = function(){
 		$.getScript("simulations/" + simulationName + ".js");
 	}
 
+	function drawCartesianGraph(properties){
+		var size = properties.size || {x:10,y:10};
+		var offset = properties.offset || {x:0,y:0};
+		var axis = properties.axis;
+
+	}
+
 	function doNothing(){};
 
 	return {
@@ -32,6 +39,8 @@ var playground = function(){
 		context : null,
 		width : 600,
 		height : 500,
+
+		drawCartesianGraph : drawCartesianGraph,
 
 		reset : reset,
 		set_title: set_title,
